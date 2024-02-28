@@ -1,4 +1,4 @@
 # rishiksinha59.github.io
 
-##Tech Stacks
+# Tech Stacks
 -HTML | CSS | JS
