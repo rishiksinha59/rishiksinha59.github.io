@@ -72,3 +72,27 @@ $(document).ready(function () {
   });
 });
 
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // Stop the default form submission
+
+  const formData = new FormData(form);
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert("Form Submitted");
+        form.reset(); // clear the form
+      } else {
+        alert("Something went wrong!");
+      }
+    })
+    .catch(() => {
+      alert("Something went wrong!");
+    });
+});

@@ -11,6 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -54,12 +55,32 @@ footer {
 }
 #about .about-content,
 .services .serv-content,
-#skills .skills-content,
 .contact .contact-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  width: 100%;
   justify-content: space-between;
+}
+
+.column,
+.contact .contact-content .column {
+  /* width: 100%; */
+  margin-bottom: 35px;
+}
+
+
+@media (max-width: 768px) {
+  .contact .contact-content {
+    flex-direction: column;
+    gap: 20px; /* optional: for spacing between items */
+  }
+  #col-right{
+    width: 100%;
+  }
+  
+  #col-left{
+    width: 100%;
+  }
 }
 section .title {
   position: relative;
@@ -309,41 +330,85 @@ section .title::after {
   padding: 50px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  
 }
 .services .serv-content .card:hover {
   background: crimson;
 }
 .services .serv-content .card .box {
   transition: all 0.3s ease;
+  color: #fff;
+
 }
 .services .serv-content .card:hover .box {
   transform: scale(1.05);
+
+
 }
 .services .serv-content .card i {
   font-size: 50px;
   color: crimson;
   transition: color 0.3s ease;
+
+
 }
 .services .serv-content .card:hover i {
   color: #fff;
+
+
 }
 .services .serv-content .card .text {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
+  color: #fff;
 }
 
 /* skills section styling */
 
+/* #skills .max-widther {
+  max-width: 1400px;
+  padding: 0 25px;
+  margin: 0 auto;
+  border: 2px solid;
+  height: auto;
+}
 
-.skills-card-img{
-  height: 160px;
-  width: 170px;
-  border-radius: 5%;
-  padding: 1.1em;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
-    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-  transition: all 0.3s ease;
+@media (min-width: 768px) {
+  #skills > .max-widther{
+    padding: 0 50px;
+  }
+} */
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-items: center;
+  gap: 60px;
+}
+
+.skills-card {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  
+}
+
+.skills-card:hover {
+  transform: scale(1.05);
+}
+
+.skills-card-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 .skills .title::after {
   content: "what i know";
@@ -353,108 +418,61 @@ section .title::after {
   content: "what i know";
 }
 
-/* skills right column */
-#skills .skills-content .column {
-  width: calc(50% - 30px);
-  /* border: 2px solid black; */
-  height: 60vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-#skills .skills-content .left .text {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-#skills .skills-content .left p {
-  text-align: justify;
-}
-#skills .skills-content .left a {
-  display: inline-block;
-  background: crimson;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 16px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
-}
-#skills .skills-content .left a:hover {
-  color: crimson;
-  background: none;
-}
-#skills .skills-content .right .bars {
-  margin-bottom: 15px;
-}
-#skills .skills-content .right .info {
-  display: flex;
-  margin-bottom: 5px;
-  align-items: center;
-  justify-content: space-between;
-}
-#skills .skills-content .right span {
-  font-weight: 500;
-  font-size: 18px;
-}
-#skills .skills-content .right .line {
-  height: 5px;
-  width: 100%;
-  background: lightgrey;
-  position: relative;
-}
-#skills .skills-content .right .line::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: crimson;
-}
-.skills-content .right .html::before {
-  width: 90%;
-}
-.skills-content .right .css::before {
-  width: 60%;
-}
-.skills-content .right .js::before {
-  width: 80%;
-}
-.skills-content .right .php::before {
-  width: 50%;
-}
-.skills-content .right .mysql::before {
-  width: 70%;
-}
-.skills-card-name{
- align-items: center;
- font-size: 20px;
+/* Tablets: 768px and below - 2 columns */
+@media (max-width: 768px) {
+  .skills-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
 
+  .skills-card {
+    width: 130px;
+    height: 130px;
+  }
 }
+
+/* Small tablets / large phones: 576px and below - 1 column */
+@media (max-width: 576px) {
+  .skills-content {
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+  }
+
+  .skills-card {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
 
 /* project section styling */
 #projects .title::after {
   content: "see my work";
 }
+.project-card {
+  height: auto;
+}
 #projects .carousel .project-card {
-  background: #222;
-  border-radius: 6px;
+  border-radius: 20px;
   padding: 25px 35px;
   text-align: center;
   overflow: hidden;
   transition: all 0.3s ease;
 }
-#projects .carousel .project-card:hover {
-  background: crimson;
+.project-description{
+  padding-top: 10px;
+  font-weight: 100;
+  font-size: 16px;
 }
-
-#projects .carousel .project-card .text {
-  font-size: 25px;
+.project-title{
+  padding-top: 10px;
+  font-size: large;
   font-weight: 500;
-  margin: 10px 0 7px 0;
 }
-
+.project-tech-stack{
+  margin-top: 10px;
+}
 .repo-links {
   display: flex;
   justify-content: space-between;
@@ -468,6 +486,7 @@ section .title::after {
   display: flex;
   width: 35%;
   border: 1px solid white;
+  border-radius: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -476,6 +495,7 @@ section .title::after {
   display: flex;
   width: 35%;
   border: 1px solid white;
+  border-radius: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -492,12 +512,12 @@ section .title::after {
   height: 300px;
   object-fit: cover;
   border-radius: 5%;
-  border: 5px solid crimson;
+  border: 5px solid rgb(218, 203, 203);
   transition: all 0.3s ease;
   align-items: center;
 }
 #projects .carousel .project-card:hover img {
-  border-color: #fff;
+  border-color: crimson;
 }
 .owl-dots {
   text-align: center;
@@ -621,8 +641,7 @@ section .title::after {
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover {
-  color: crimson;
-  background: none;
+  opacity: 70%;
 }
 /* footer section styling */
 footer {
@@ -717,11 +736,7 @@ footer span a:hover {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
-  #skills .skills-content .column,
-  .contact .contact-content .column {
-    width: 100%;
-    margin-bottom: 35px;
-  }
+ 
 }
 
 @media (max-width: 690px) {
@@ -760,9 +775,6 @@ footer span a:hover {
     font-size: 27px;
   }
   #about .about-content .right .text,
-  #skills .skills-content .left .text {
-    font-size: 19px;
-  }
   .contact .right form .fields {
     flex-direction: column;
   }
