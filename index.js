@@ -1,10 +1,10 @@
 $(document).ready(function () {
   $(window).scroll(function () {
-    // sticky nav-menu on scroll script
+    // sticky nav-menu on scroll script (fixed selector from class to ID)
     if (this.scrollY > 20) {
-      $(".nav-menu").addClass("sticky");
+      $("#nav-menu").addClass("sticky");
     } else {
-      $(".nav-menu").removeClass("sticky");
+      $("#nav-menu").removeClass("sticky");
     }
 
     // scroll-up button show/hide script
@@ -34,17 +34,17 @@ $(document).ready(function () {
   });
 
   // typing text animation script
-  var typed = new Typed(".typing", {
-    strings: ["Back-End Developer","Front-End Developer"],
-    typeSpeed: 100,
-    backSpeed: 60,
+  new Typed(".typing", {
+    strings: ["Full-Stack Software Developer", "React & Next.js Expert", "Python & Node.js Engineer"],
+    typeSpeed: 80,
+    backSpeed: 40,
     loop: true,
   });
 
-  var typed = new Typed(".typing-2", {
-    strings: ["Back-End Developer", "Front-End Developer"],
-    typeSpeed: 100,
-    backSpeed: 60,
+  new Typed(".typing-2", {
+    strings: ["Full-Stack Developer", "Problem Solver", "Software Engineer"],
+    typeSpeed: 80,
+    backSpeed: 40,
     loop: true,
   });
 
@@ -52,30 +52,38 @@ $(document).ready(function () {
   $(".carousel").owlCarousel({
     margin: 20,
     loop: true,
+    nav: true,
+    navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
     autoplay: true,
-    autoplayTimeOut: 2000,
+    autoplayTimeOut: 3000,
     autoplayHoverPause: true,
     responsive: {
       0: {
         items: 1,
-        nav: false,
       },
-      600: {
+      768: {
         items: 2,
-        nav: false,
       },
-      1000: {
+      1024: {
         items: 3,
-        nav: false,
       },
     },
   });
 });
 
+// Advanced Contact Form Submission logic with user friendly UI validation
 const form = document.getElementById("contact-form");
+const submitBtn = document.getElementById("submit-btn");
+const statusDiv = document.getElementById("form-status");
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Stop the default form submission
+  e.preventDefault(); // Stop default form navigation
+
+  // UI loading feedback
+  submitBtn.disabled = true;
+  submitBtn.innerText = "Sending...";
+  statusDiv.style.display = "none";
+  statusDiv.className = "form-status";
 
   const formData = new FormData(form);
 
@@ -85,14 +93,25 @@ form.addEventListener("submit", function (e) {
   })
     .then(response => response.json())
     .then(data => {
+      submitBtn.disabled = false;
+      submitBtn.innerText = "Send Message";
       if (data.success) {
-        alert("Form Submitted");
-        form.reset(); // clear the form
+        statusDiv.innerText = "Message sent successfully! Thank you.";
+        statusDiv.className = "form-status success";
+        form.reset();
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          statusDiv.style.display = "none";
+        }, 5000);
       } else {
-        alert("Something went wrong!");
+        statusDiv.innerText = data.message || "Something went wrong! Please try again.";
+        statusDiv.className = "form-status error";
       }
     })
     .catch(() => {
-      alert("Something went wrong!");
+      submitBtn.disabled = false;
+      submitBtn.innerText = "Send Message";
+      statusDiv.innerText = "Failed to connect. Please check your network connection.";
+      statusDiv.className = "form-status error";
     });
 });
