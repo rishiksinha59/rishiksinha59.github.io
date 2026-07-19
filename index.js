@@ -35,7 +35,7 @@ $(document).ready(function () {
 
   // typing text animation script
   new Typed(".typing", {
-    strings: ["Full-Stack Software Developer", "React & Next.js Expert", "Python & Node.js Engineer"],
+    strings: ["Full-Stack Software Developer", "React & Next.js Expert", "Full-Stack Engineer"],
     typeSpeed: 80,
     backSpeed: 40,
     loop: true,
