@@ -4,500 +4,620 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishik Sinha | Full-Stack Software Developer</title>
+    <title>Rishik Sinha | Full-Stack Engineer (React · Next.js · TypeScript · Node.js)</title>
     <meta name="description"
-        content="Portfolio of Rishik Sinha, a Full-Stack Software Developer specializing in Next.js, React, TypeScript, and Node.js. Explore projects and professional experience.">
-    <link rel="icon" type="image/x-icon" href="images/favicons.ico">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        content="Rishik Sinha — Full-Stack Engineer building production web apps, Headless CMS platforms, and high-craft UIs. Available for 48-hour studio sprints and full-time roles.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0e17'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%2306b6d4' font-family='sans-serif' font-weight='700' font-size='28'%3ERS%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+    <link rel="stylesheet" href="./index.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
+    <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+    <button type="button" class="scroll-up-btn" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
     <!-- Navbar start -->
-    <nav id="nav-menu">
-        <div class="max-width">
-            <div class="logo">
-                <a href="#">Rishik<span>Sinha</span></a>
-            </div>
-
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#experience" class="menu-btn">Experience</a></li>
-                <li><a href="#services" class="menu-btn">Services</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#projects" class="menu-btn">Projects</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
-                <li><button id="resume-button-1"
-                        onclick="window.open('https://drive.google.com/file/d/1PkSVGTpw7S4S0IQO9PZRJYqB8gBMqzfs/view?usp=sharing')">
-                        <a id="resume-link-1" href="./images/Rishik_Sinha_Resume.pdf" download>Resume</a></button></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Home Section start -->
-    <section id="home" class="nav-link home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="home-left">
-                    <div class="text-1">Hello, I am</div>
-                    <div class="text-2" id="user-detail-name">Rishik Sinha</div>
-                    <div class="text-3">A <span class="typing"></span></div>
-                    <a href="./images/Rishik_Sinha_Resume.pdf" download="" id="resume-button-2" class="nav-link resume"
-                        onclick="window.open('https://drive.google.com/file/d/1PkSVGTpw7S4S0IQO9PZRJYqB8gBMqzfs/view?usp=sharing')">Get
-                        Resume</a>
+    <header>
+        <nav id="nav-menu" aria-label="Primary">
+            <div class="max-width">
+                <div class="logo">
+                    <a href="#home">Rishik<span>Sinha</span></a>
                 </div>
-                <div class="home-right">
-                    <!-- Elegant CSS IDE Window -->
-                    <div class="ide-window glass-card">
-                        <div class="ide-header">
-                            <div class="ide-buttons">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
+
+                <ul id="primary-nav-list" class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a id="resume-button-1" href="./images/Rishik_Sinha_Resume.pdf" target="_blank"
+                            rel="noopener noreferrer">Resume</a></li>
+                </ul>
+                <button type="button" class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+                    aria-controls="primary-nav-list">
+                    <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Home Section start -->
+        <section id="home" class="home">
+            <div class="max-width">
+                <div class="home-content">
+                    <div class="home-left">
+                        <div class="text-1">Hello, I am</div>
+                        <h1 class="text-2" id="user-detail-name">Rishik Sinha</h1>
+                        <p class="text-3">Full-Stack Engineer <span class="hero-stack">(React · Next.js · TypeScript ·
+                                Node.js)</span></p>
+                        <p class="hero-subtitle">Building production web apps, Headless CMS platforms, and high-craft
+                            UIs.</p>
+                        <div class="hero-ctas">
+                            <a href="#contact" class="hero-cta-primary">Start a Project / Hire Me</a>
+                            <a href="#projects" class="hero-cta-secondary">View Work</a>
+                        </div>
+                    </div>
+                    <div class="home-right">
+                        <aside class="studio-brief glass-card" aria-label="Engineering profile and interactive UI demo">
+                            <div class="brief-topbar">
+                                <span class="brief-status">
+                                    <span class="brief-dot" aria-hidden="true"></span>
+                                    Available for Roles &amp; Select Builds
+                                </span>
+                                <div class="brief-tabs" role="tablist" aria-label="Profile and interactive UI demo">
+                                    <button type="button" role="tab" id="brief-tab-overview" aria-selected="true"
+                                        tabindex="0" data-tab-target="brief-panel-overview">Overview</button>
+                                    <button type="button" role="tab" id="brief-tab-demo" aria-selected="false"
+                                        tabindex="-1" data-tab-target="brief-panel-demo">UI Demo</button>
+                                </div>
                             </div>
-                            <div class="ide-tab"><i class="fab fa-react" style="color: #61dafb; font-size: 13px;"></i>
-                                developer.tsx</div>
+
+                            <div id="brief-panel-overview" class="brief-panel" role="tabpanel"
+                                aria-labelledby="brief-tab-overview" tabindex="0">
+                                <h2 class="brief-title">Engineering &amp; Delivery Profile</h2>
+                                <dl class="brief-list">
+                                    <div class="brief-row">
+                                        <dt>Core Stack</dt>
+                                        <dd>React, Next.js, TypeScript, Node.js</dd>
+                                    </div>
+                                    <div class="brief-row">
+                                        <dt>CMS &amp; APIs</dt>
+                                        <dd>Strapi, Headless WP, Supabase, Firebase</dd>
+                                    </div>
+                                    <div class="brief-row">
+                                        <dt>Availability</dt>
+                                        <dd>Full-time (immediate) &amp; fixed-scope builds</dd>
+                                    </div>
+                                    <div class="brief-row">
+                                        <dt>Delivery Bar</dt>
+                                        <dd>WCAG AA, Core Web Vitals, clean handoff</dd>
+                                    </div>
+                                </dl>
+                                <p class="brief-footer">Built for product engineering teams, technical founders, and
+                                    design studios.</p>
+                            </div>
+
+                            <div id="brief-panel-demo" class="brief-panel" role="tabpanel"
+                                aria-labelledby="brief-tab-demo" hidden>
+                                <h2 class="brief-title">Interactive Craft Workflow</h2>
+                                <div class="demo-stepper" role="group" aria-label="Delivery stages">
+                                    <button type="button" class="demo-step-btn" aria-pressed="true"
+                                        data-demo-step="0">01 Figma</button>
+                                    <button type="button" class="demo-step-btn" aria-pressed="false"
+                                        data-demo-step="1">02 CMS &amp; API</button>
+                                    <button type="button" class="demo-step-btn" aria-pressed="false"
+                                        data-demo-step="2">03 QA &amp; Ship</button>
+                                    <span class="demo-progress" aria-hidden="true"></span>
+                                </div>
+                                <div class="demo-stage" aria-live="polite">
+                                    <h3 class="demo-stage-title" id="demo-stage-title">Component &amp; Motion Handoff</h3>
+                                    <p class="demo-stage-copy" id="demo-stage-copy">Semantic tokens, responsive grid
+                                        layouts, GSAP/Framer Motion choreography, and 60 FPS composited transitions.</p>
+                                    <div class="demo-chips" id="demo-stage-chips">
+                                        <span class="demo-chip">Zero layout shift</span>
+                                        <span class="demo-chip">Reduced-motion safe</span>
+                                        <span class="demo-chip">Vanilla / React</span>
+                                    </div>
+                                </div>
+                                <p class="brief-footer">GPU-composited transitions · 0 external UI dependencies ·
+                                    Keyboard accessible.</p>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section start -->
+        <section id="about" class="about section">
+            <div class="max-width">
+                <h2 class="title">About</h2>
+                <div class="about-inner">
+                    <div class="about-content">
+                        <div class="column left">
+                            <img class="home-img" src="./images/profile.webp" alt="Rishik Sinha" width="760"
+                                height="688" decoding="async">
                         </div>
-                        <div class="ide-body">
-                            <pre><code><span class="keyword">const</span> <span class="function">developer</span> = {
-  name: <span class="string">'Rishik Sinha'</span>,
-  role: <span class="string">'Full-Stack Developer'</span>,
-  skills: [
-    <span class="string">'React'</span>, <span class="string">'Next.js'</span>, 
-    <span class="string">'TypeScript'</span>, <span class="string">'Node.js'</span>, 
-    <span class="string">'MongoDB'</span>
-  ],
-  passion: <span class="string">'Building elegant systems'</span>,
-  aiWorkflow: <span class="keyword">true</span>,
-  deliveringValue: <span class="keyword">function</span>() {
-    <span class="keyword">return</span> <span class="keyword">this</span>.skills.join(<span class="string">' + '</span>);
-  }
-};</code></pre>
+                        <div class="column right">
+                            <h3 class="about-heading">Full-Stack Engineer</h3>
+                            <p id="user-detail-intro">
+                                I am a Full-Stack Engineer building production web applications, Headless CMS
+                                platforms, and responsive UI systems across healthcare, logistics, and e-commerce.
+                                With hands-on experience shipping React, Next.js, TypeScript, and Node.js systems in
+                                fast-paced product teams, I am open to full-time engineering roles as well as select
+                                fixed-scope builds for founders and design studios.
+                            </p>
+                            <div class="experience-highlight">
+                                <h3>Core Focus Areas</h3>
+                                <div class="skills-grid">
+                                    <span class="skill-badge">Next.js &amp; React Architecture</span>
+                                    <span class="skill-badge">Headless CMS &amp; REST APIs</span>
+                                    <span class="skill-badge">Production Web Apps &amp; UI Systems</span>
+                                    <span class="skill-badge">WCAG AA &amp; Core Web Vitals</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section start -->
-    <section id="about" class="about section">
-        <div class="max-width">
-            <h2 class="title">About</h2>
-            <div class="nav-link about">
-                <div class="about-content">
-                    <div class="column left">
-                        <img class="home-img" src="./images/profile.jpeg" alt="Rishik Sinha Profile Pic">
+        <!-- Experience Section start -->
+        <section id="experience" class="experience section">
+            <div class="max-width">
+                <h2 class="title">Experience</h2>
+                <div class="timeline">
+                    <!-- CosmoOps -->
+                    <div class="timeline-item left-item">
+                        <div class="timeline-content glass-card">
+                            <h3>CosmoOps Pvt. Ltd</h3>
+                            <h4>Software Developer</h4>
+                            <span class="date">Oct 2025 – Aug 2026</span>
+                            <div class="exp-metrics">
+                                <span class="exp-metric">25% faster APIs</span>
+                                <span class="exp-metric">~40% fewer defects</span>
+                                <span class="exp-metric">4 client apps</span>
+                            </div>
+                            <ul>
+                                <li>Built and maintained 4 healthcare web apps (MSI Reproductive Choices, Mari Woman
+                                    Pregnancy Tracker, GI Apps, OVH) with React, Next.js, TypeScript, and WCAG UI
+                                    patterns.</li>
+                                <li>Integrated REST APIs with Firebase and Supabase, improving API response time by 25%
+                                    across patient-facing tracking flows.</li>
+                                <li>Automated reporting pipelines via backend utility scripts and maintained GitHub
+                                    Actions CI/CD for automated testing and deploys.</li>
+                                <li>Resolved cross-browser performance issues and UI defects (~40% defect reduction)
+                                    using structured AI-assisted engineering workflows.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="column right">
-                        <div class="text">Rishik Sinha <span class="typing-2"></span></div>
-                        <p id="user-detail-intro">
-                             I am a Full-Stack Software Developer specialized in building scalable, responsive web
-                            applications across healthcare, logistics, and e-commerce domains. Proficient in the MERN
-                            stack, Next.js, and TypeScript, I have a consistent track record of delivering
-                            performance-optimized digital products. I excel at back-end scripting, automation, API
-                            development, and integrating LLM APIs using AI-assisted workflows (Cursor, Claude Code,
-                            GitHub Copilot) to accelerate delivery, maintain clean architecture, and drive measurable
-                            business outcomes.
+                    <!-- Omniful -->
+                    <div class="timeline-item right-item">
+                        <div class="timeline-content glass-card">
+                            <h3>Omniful</h3>
+                            <h4>Software Engineer</h4>
+                            <span class="date">Dec 2024 – May 2025</span>
+                            <div class="exp-metrics">
+                                <span class="exp-metric">+30% Core Web Vitals</span>
+                                <span class="exp-metric">&gt;35% fewer prod bugs</span>
+                                <span class="exp-metric">Strapi CMS</span>
+                            </div>
+                            <ul>
+                                <li>Engineered Warehouse (WMS) and Transport Management interfaces using React, Next.js,
+                                    TypeScript, and TailwindCSS.</li>
+                                <li>Improved page speed and Core Web Vitals by 30% through code splitting, lazy loading,
+                                    and asset optimization.</li>
+                                <li>Integrated Strapi CMS for independent content publishing and wrote automation scripts
+                                    for internal data transformation pipelines.</li>
+                                <li>Monitored and resolved live production errors with Sentry, cutting user-impacting
+                                    bugs by over 35% in the first month.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Midha Education -->
+                    <div class="timeline-item left-item">
+                        <div class="timeline-content glass-card">
+                            <h3>Midha Education Private Limited</h3>
+                            <h4>Web Developer</h4>
+                            <span class="date">May 2024 – Dec 2024</span>
+                            <div class="exp-metrics">
+                                <span class="exp-metric">MERN Stack</span>
+                                <span class="exp-metric">Next.js &amp; Tailwind</span>
+                                <span class="exp-metric">Query Tuning</span>
+                            </div>
+                            <ul>
+                                <li>Built and maintained full-stack web applications using MongoDB, Express.js,
+                                    React.js, and Node.js.</li>
+                                <li>Implemented responsive Next.js and TailwindCSS interfaces to improve cross-device
+                                    accessibility.</li>
+                                <li>Optimized REST API endpoints and MongoDB queries for faster application
+                                    performance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section start -->
+        <section class="services" id="services">
+            <div class="max-width">
+                <h2 class="title">Services</h2>
+                <div class="serv-content">
+                    <div class="card glass-card">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <path d="M3 9h18"></path>
+                                <path d="M9 21V9"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text">Figma to Next.js &amp; React</h3>
+                        <p>Pixel-perfect, responsive interfaces built with Next.js, TypeScript, Tailwind CSS,
+                            GSAP/Framer Motion, and WCAG accessibility.</p>
+                    </div>
+                    <div class="card glass-card">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="7" rx="1.5"></rect>
+                                <rect x="2" y="14" width="20" height="7" rx="1.5"></rect>
+                                <line x1="6" y1="6.5" x2="6.01" y2="6.5"></line>
+                                <line x1="6" y1="17.5" x2="6.01" y2="17.5"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text">Headless CMS &amp; Full-Stack APIs</h3>
+                        <p>Production backends and content architectures using Node.js, Express, Strapi, Headless
+                            WordPress, Supabase, Firebase, and third-party webhooks.</p>
+                    </div>
+                    <div class="card glass-card">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="text">48-Hour Sprints &amp; Performance</h3>
+                        <p>Fixed-price overflow builds for design studios, Core Web Vitals/SEO optimization, and rapid
+                            production bug fixes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section start -->
+        <section id="skills" class="skills">
+            <div class="max-width">
+                <h2 class="title">Skills</h2>
+                <div class="skills-categories">
+                    <!-- Frontend -->
+                    <div class="skills-category-card glass-card">
+                        <h3>Frontend</h3>
+                        <div class="skills-grid">
+                            <span class="skill-badge"><img src="./images/react.svg" alt="" aria-hidden="true" width="16"
+                                    height="16" loading="lazy" decoding="async"> React.js</span>
+                            <span class="skill-badge"><img src="./images/nextjs2.svg" alt="" aria-hidden="true"
+                                    class="dark-invert" width="16" height="16" loading="lazy" decoding="async">
+                                Next.js</span>
+                            <span class="skill-badge"><img src="./images/typescript.svg" alt="" aria-hidden="true"
+                                    width="16" height="16" loading="lazy" decoding="async"> TypeScript</span>
+                            <span class="skill-badge"><img src="./images/js.svg" alt="" aria-hidden="true" width="16"
+                                    height="16" loading="lazy" decoding="async"> JavaScript</span>
+                            <span class="skill-badge"><img src="./images/html5.svg" alt="" aria-hidden="true" width="16"
+                                    height="16" loading="lazy" decoding="async"> HTML5</span>
+                            <span class="skill-badge"><img src="./images/css3.svg" alt="" aria-hidden="true" width="16"
+                                    height="16" loading="lazy" decoding="async"> CSS3</span>
+                            <span class="skill-badge"><img src="./images/tailwindcss.svg" alt="" aria-hidden="true"
+                                    width="16" height="16" loading="lazy" decoding="async">
+                                TailwindCSS</span>
+                            <span class="skill-badge">SCSS</span>
+                            <span class="skill-badge">Framer Motion</span>
+                            <span class="skill-badge">GSAP</span>
+                            <span class="skill-badge">Shadcn UI</span>
+                            <span class="skill-badge">MUI</span>
+                            <span class="skill-badge"><img src="./images/vitejs.svg" alt="" aria-hidden="true"
+                                    width="16" height="16" loading="lazy" decoding="async"> Vite</span>
+                        </div>
+                    </div>
+                    <!-- Backend & Databases -->
+                    <div class="skills-category-card glass-card">
+                        <h3>Backend &amp; Databases</h3>
+                        <div class="skills-grid">
+                            <span class="skill-badge"><img src="./images/nodejs.svg" alt="" aria-hidden="true"
+                                    width="16" height="16" loading="lazy" decoding="async"> Node.js</span>
+                            <span class="skill-badge"><img src="./images/expres.svg" alt="" aria-hidden="true"
+                                    class="dark-invert" width="16" height="16" loading="lazy" decoding="async">
+                                Express.js</span>
+                            <span class="skill-badge">RESTful APIs</span>
+                            <span class="skill-badge">Prisma ORM</span>
+                            <span class="skill-badge">Strapi CMS</span>
+                            <span class="skill-badge"><img src="./images/mongodb.svg" alt="" aria-hidden="true"
+                                    width="16" height="16" loading="lazy" decoding="async"> MongoDB</span>
+                            <span class="skill-badge">Firebase</span>
+                            <span class="skill-badge">Supabase</span>
+                            <span class="skill-badge">PostgreSQL</span>
+                            <span class="skill-badge">MySQL</span>
+                        </div>
+                    </div>
+                    <!-- AI & DevOps -->
+                    <div class="skills-category-card glass-card">
+                        <h3>AI &amp; DevOps</h3>
+                        <div class="skills-grid">
+                            <span class="skill-badge"><img src="./images/openai.svg" alt="" aria-hidden="true"
+                                    class="dark-invert" width="16" height="16" loading="lazy" decoding="async"> LLM
+                                APIs</span>
+                            <span class="skill-badge">Prompt Engineering</span>
+                            <span class="skill-badge">AI Workflows</span>
+                            <span class="skill-badge"><img src="./images/git.svg" alt="" aria-hidden="true" width="16"
+                                    height="16" loading="lazy" decoding="async"> Git</span>
+                            <span class="skill-badge"><img src="./images/github.svg" alt="" aria-hidden="true"
+                                    class="dark-invert" width="16" height="16" loading="lazy" decoding="async">
+                                GitHub Actions (CI/CD)</span>
+                            <span class="skill-badge"><img src="./images/Vector.svg" alt="" aria-hidden="true"
+                                    class="dark-invert" width="16" height="16" loading="lazy" decoding="async">
+                                Vercel</span>
+                            <span class="skill-badge"><img src="./images/netlify.svg" alt="" aria-hidden="true"
+                                    width="16" height="16" loading="lazy" decoding="async"> Netlify</span>
+                            <span class="skill-badge"><img src="./images/aws.svg" alt="" aria-hidden="true" width="16"
+                                    height="16" loading="lazy" decoding="async"> AWS S3</span>
+                            <span class="skill-badge">Docker</span>
+                        </div>
+                    </div>
+                    <!-- Quality & Mobile -->
+                    <div class="skills-category-card glass-card">
+                        <h3>Mobile &amp; Quality Assurance</h3>
+                        <div class="skills-grid">
+                            <span class="skill-badge"><img src="./images/react.svg" alt="" aria-hidden="true" width="16"
+                                    height="16" loading="lazy" decoding="async"> React Native</span>
+                            <span class="skill-badge"><img src="./images/cypress.svg" alt="" aria-hidden="true"
+                                    width="16" height="16" loading="lazy" decoding="async"> Cypress</span>
+                            <span class="skill-badge">Sentry</span>
+                            <span class="skill-badge">SonarQube</span>
+                            <span class="skill-badge">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section start -->
+        <section id="projects" class="projects">
+            <div class="max-width">
+                <h2 class="title">Projects</h2>
+                <div class="project-filters" role="group" aria-label="Filter projects by category">
+                    <button type="button" class="filter-btn" aria-pressed="true" data-filter="all">All (4)</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="nextjs">Next.js &amp;
+                        CMS</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="fullstack">Full-Stack
+                        APIs</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="motion">UI &amp;
+                        Motion</button>
+                </div>
+                <div class="projects-grid" data-visible-count="4">
+                    <!-- Smart Link Router -->
+                    <article class="project-card glass-card" data-categories="nextjs fullstack">
+                        <span class="project-tag flashing">New</span>
+                        <img src="./images/smart-link-router.webp" alt="Smart Link Router dashboard preview" width="880"
+                            height="550" loading="lazy" decoding="async">
+                        <h3 class="project-title">Smart Link Router</h3>
+                        <p class="project-description">Dynamic link routing and cross-platform analytics platform
+                            featuring custom slug rules, click telemetry, and Headless CMS integration.</p>
+                        <ul class="project-highlights" aria-label="Key deliverables">
+                            <li>Dynamic slug routing</li>
+                            <li>Click telemetry</li>
+                            <li>Strapi CMS</li>
+                        </ul>
+                        <p class="project-tech-stack"><strong>Tech Stack:</strong> Next.js 14 | Express | MongoDB |
+                            Strapi</p>
+                        <div class="repo-links">
+                            <a class="project-github-link" href="https://github.com/rishiksinha59/smart-link-router"
+                                target="_blank" rel="noopener noreferrer">Git Repo<span class="visually-hidden"> for Smart
+                                    Link Router</span></a>
+                            <a class="project-deployed-link" href="https://smart-link-router.vercel.app/"
+                                target="_blank" rel="noopener noreferrer">Live Site<span class="visually-hidden"> for
+                                    Smart Link Router</span></a>
+                        </div>
+                    </article>
+                    <!-- EdgeDocs -->
+                    <article class="project-card glass-card" data-categories="nextjs motion">
+                        <img src="./images/edgedocs.webp" alt="EdgeDocs documentation platform preview" width="880"
+                            height="772" loading="lazy" decoding="async">
+                        <h3 class="project-title">EdgeDocs</h3>
+                        <p class="project-description">Developer-focused API and project documentation platform with
+                            clean UI, structured documentation architecture, and fast navigation.</p>
+                        <ul class="project-highlights" aria-label="Key deliverables">
+                            <li>Structured docs tree</li>
+                            <li>Type-safe Next.js</li>
+                            <li>Developer UX</li>
+                        </ul>
+                        <p class="project-tech-stack"><strong>Tech Stack:</strong> Next.js | TypeScript | Tailwind CSS
                         </p>
-                        <div class="experience-highlight">
-                            <h4>Core Focus Areas</h4>
-                            <div class="skills-grid">
-                                <span class="skill-badge">Scalable Full-Stack Apps</span>
-                                <span class="skill-badge">Healthcare & Logistics Platforms</span>
-                                <span class="skill-badge">AI Integration & Agentic Workflows</span>
-                                <span class="skill-badge">Clean Code & Responsive UI/UX</span>
-                            </div>
+                        <div class="repo-links">
+                            <a class="project-github-link" href="https://github.com/rishiksinha59/edgedocs"
+                                target="_blank" rel="noopener noreferrer">Git Repo<span class="visually-hidden"> for
+                                    EdgeDocs</span></a>
+                            <a class="project-deployed-link" href="https://edgedocs.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">Live Site<span class="visually-hidden"> for
+                                    EdgeDocs</span></a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section start -->
-    <section id="experience" class="experience section">
-        <div class="max-width">
-            <h2 class="title">Experience</h2>
-            <div class="timeline">
-                <!-- CosmoOps -->
-                <div class="timeline-item left-item">
-                    <div class="timeline-content glass-card">
-                        <h3>CosmoOps Pvt. Ltd</h3>
-                        <h4>Software Developer</h4>
-                        <span class="date">Oct 2025 – Present</span>
-                        <ul>
-                            <li>Building and maintaining healthcare web applications across multiple client projects:
-                                MSI Reproductive Choices, Mari Woman Pregnancy Tracker, GI Apps, and One Vision Health
-                                (OVH).</li>
-                            <li>Developing accessible, responsive UI components with React.js, Next.js, and TypeScript,
-                                adhering to healthcare UX standards and WCAG accessibility guidelines.</li>
-                            <li>Integrating RESTful APIs and managing real-time data with Firebase and Supabase,
-                                improving API response time by 25% and enhancing user engagement across patient-facing
-                                health tracking platforms.</li>
-                            <li>Writing utility scripts for data processing, automated reporting, and backend
-                                task automation to support healthcare platform operations.</li>
-                            <li>Setting up and maintaining CI/CD pipelines via GitHub Actions, enabling automated
-                                testing and streamlined deployments.</li>
-                            <li>Leveraging AI-assisted development tools (Cursor, Claude Code, GitHub Copilot) to
-                                measurably improve development velocity and code quality.</li>
-                            <li>Diagnosed and resolved cross-browser performance issues and UI bugs, cutting
-                                user-reported defects by ~40% and ensuring consistent high-quality experiences.</li>
+                    </article>
+                    <!-- Pelican E-Commerce -->
+                    <article class="project-card glass-card" data-categories="fullstack">
+                        <img src="./images/pelican.webp" alt="Pelican E-Commerce storefront preview" width="880"
+                            height="924" loading="lazy" decoding="async">
+                        <h3 class="project-title">Pelican E-Commerce</h3>
+                        <p class="project-description">Full-stack clothing e-commerce platform with product filtering,
+                            cart state management, and responsive storefront UI.</p>
+                        <ul class="project-highlights" aria-label="Key deliverables">
+                            <li>Catalog filtering</li>
+                            <li>Cart state sync</li>
+                            <li>MERN REST API</li>
                         </ul>
-                    </div>
-                </div>
-                <!-- Omniful -->
-                <div class="timeline-item right-item">
-                    <div class="timeline-content glass-card">
-                        <h3>Omniful</h3>
-                        <h4>Software Engineer</h4>
-                        <span class="date">Dec 2024 – May 2025</span>
-                        <ul>
-                            <li>Developed high-performance interfaces for Omniful's Warehouse Management System (WMS)
-                                and Transport Management platform using React.js, Next.js, and TypeScript.</li>
-                            <li>Improved website speed and Core Web Vitals by 30% through code splitting, lazy loading,
-                                and asset optimisation strategies.</li>
-                             <li>Developed automation scripts for internal tooling, data transformation pipelines, and
-                                backend automation to support logistics platform workflows.</li>
-                            <li>Integrated Strapi CMS for dynamic content management, enabling non-technical
-                                stakeholders to publish content independently.</li>
-                            <li>Enhanced UI/UX with engaging interactive features using TailwindCSS; collaborated with
-                                product teams to deliver pixel-perfect designs.</li>
-                            <li>Monitored and resolved production errors in real time using Sentry, reducing
-                                user-impacting bugs by over 35% within the first month.</li>
+                        <p class="project-tech-stack"><strong>Tech Stack:</strong> MERN | Vite | JavaScript</p>
+                        <div class="repo-links">
+                            <a class="project-github-link" href="https://github.com/rishiksinha59/ecommerce"
+                                target="_blank" rel="noopener noreferrer">Git Repo<span class="visually-hidden"> for
+                                    Pelican E-Commerce</span></a>
+                            <a class="project-deployed-link" href="https://pelican-fe.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">Live Site<span class="visually-hidden"> for Pelican
+                                    E-Commerce</span></a>
+                        </div>
+                    </article>
+                    <!-- Interactive Product Showcase -->
+                    <article class="project-card glass-card" data-categories="motion">
+                        <img src="./images/product-showcase.webp" alt="Interactive Product Showcase preview" width="880"
+                            height="855" loading="lazy" decoding="async">
+                        <h3 class="project-title">Interactive Product Showcase</h3>
+                        <p class="project-description">Responsive product storytelling experience featuring smooth GSAP
+                            scroll choreography, high-FPS transitions, and hardware-accelerated motion.</p>
+                        <ul class="project-highlights" aria-label="Key deliverables">
+                            <li>GSAP ScrollTrigger</li>
+                            <li>60 FPS motion</li>
+                            <li>Responsive layout</li>
                         </ul>
-                    </div>
-                </div>
-                <!-- Midha Education -->
-                <div class="timeline-item left-item">
-                    <div class="timeline-content glass-card">
-                        <h3>Midha Education Private Limited</h3>
-                        <h4>Web Developer</h4>
-                        <span class="date">May 2024 – Dec 2024</span>
-                        <ul>
-                            <li>Developed and maintained dynamic web applications using the MERN stack (MongoDB,
-                                Express.js, React.js, Node.js).</li>
-                            <li>Implemented responsive user interfaces with Next.js and TailwindCSS, improving
-                                cross-device accessibility.</li>
-                            <li>Optimised backend APIs and MongoDB database queries, contributing to improved
-                                application performance.</li>
-                            <li>Trained at Masai School - Full Stack Web Development (Mar 2024 – Jun 2024).</li>
-                        </ul>
-                    </div>
+                        <p class="project-tech-stack"><strong>Tech Stack:</strong> React | GSAP | JavaScript</p>
+                        <div class="repo-links">
+                            <a class="project-github-link" href="https://github.com/rishiksinha59/appleclone"
+                                target="_blank" rel="noopener noreferrer">Git Repo<span class="visually-hidden"> for
+                                    Interactive Product Showcase</span></a>
+                            <a class="project-deployed-link" href="https://appleclone-theta.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">Live Site<span class="visually-hidden"> for Interactive
+                                    Product Showcase</span></a>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section start -->
-    <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">Services</h2>
-            <div class="serv-content">
-                <div class="card glass-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <div class="text">Web Applications</div>
-                    <p>Developing robust, performant, and accessible web applications using modern stacks and clean
-                        architecture.</p>
-                </div>
-                <div class="card glass-card">
-                    <i class="fas fa-network-wired"></i>
-                    <div class="text">REST APIs & Backends</div>
-                     <p>Building secure, scalable, and highly optimized RESTful APIs and backend scripts using Node.js.</p>
-                </div>
-                <div class="card glass-card">
-                    <i class="fas fa-code"></i>
-                    <div class="text">Code Optimization</div>
-                    <p>Refactoring codebases for speed, optimizing database queries, and improving Core Web Vitals/SEO
-                        scores.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section start -->
-    <section id="skills" class="nav-link skills">
-        <div class="max-width">
-            <h2 class="title">Skills</h2>
-            <div class="skills-categories">
-                <!-- Frontend -->
-                <div class="skills-category-card glass-card">
-                    <h3>Frontend</h3>
-                    <div class="skills-grid">
-                        <span class="skill-badge"><img src="./images/react.svg" alt="React"> React.js</span>
-                        <span class="skill-badge"><img src="./images/nextjs2.svg" alt="Next.js" class="dark-invert">
-                            Next.js</span>
-                        <span class="skill-badge"><img src="./images/typescript.svg" alt="TypeScript"> TypeScript</span>
-                        <span class="skill-badge"><img src="./images/js.svg" alt="JavaScript"> JavaScript</span>
-                        <span class="skill-badge"><img src="./images/html5.svg" alt="HTML5"> HTML5</span>
-                        <span class="skill-badge"><img src="./images/css3.svg" alt="CSS3"> CSS3</span>
-                        <span class="skill-badge"><img src="./images/tailwindcss.svg" alt="TailwindCSS">
-                            TailwindCSS</span>
-                        <span class="skill-badge">SCSS</span>
-                        <span class="skill-badge">Framer Motion</span>
-                        <span class="skill-badge">GSAP</span>
-                        <span class="skill-badge">Shadcn UI</span>
-                        <span class="skill-badge">MUI</span>
-                        <span class="skill-badge"><img src="./images/vitejs.svg" alt="Vite"> Vite</span>
+        <!-- Contact Section start -->
+        <section class="contact" id="contact">
+            <div class="max-width">
+                <h2 class="title">Contact</h2>
+                <div class="contact-content">
+                    <div id="col-left" class="column left">
+                        <h3 class="text">Get in Touch</h3>
+                        <p>Open to full-time Full-Stack and Frontend Engineer roles (available immediately) as well as
+                            select product or frontend project builds. Send a quick note below or email me directly.
+                        </p>
+                        <div class="icons">
+                            <div class="row" id="contact-email">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </span>
+                                <div class="info">
+                                    <div class="sub-title"><a
+                                            href="mailto:sinharishik8@gmail.com">sinharishik8@gmail.com</a></div>
+                                </div>
+                            </div>
+                            <div class="row" id="contact-phone">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="info">
+                                    <div class="sub-title"><a href="tel:+917488071758">+91 7488071758</a></div>
+                                </div>
+                            </div>
+                            <div class="row" id="contact-linkedin">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="info">
+                                    <div class="sub-title"><a
+                                            href="https://www.linkedin.com/in/rishik-sinha-61a718287/" target="_blank"
+                                            rel="noopener noreferrer">linkedin.com/in/rishik-sinha</a></div>
+                                </div>
+                            </div>
+                            <div class="row" id="contact-github">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="info">
+                                    <div class="sub-title"><a href="https://github.com/rishiksinha59/" target="_blank"
+                                            rel="noopener noreferrer">github.com/rishiksinha59</a></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Backend & Databases -->
-                <div class="skills-category-card glass-card">
-                    <h3>Backend & Databases</h3>
-                    <div class="skills-grid">
-                         <span class="skill-badge"><img src="./images/nodejs.svg" alt="Node.js"> Node.js</span>
-                        <span class="skill-badge"><img src="./images/expres.svg" alt="Express" class="dark-invert">
-                            Express.js</span>
-                        <span class="skill-badge">RESTful APIs</span>
-                        <span class="skill-badge">Prisma ORM</span>
-                        <span class="skill-badge">Strapi CMS</span>
-                        <span class="skill-badge"><img src="./images/mongodb.svg" alt="MongoDB"> MongoDB</span>
-                        <span class="skill-badge">Firebase</span>
-                        <span class="skill-badge">Supabase</span>
-                        <span class="skill-badge">PostgreSQL</span>
-                        <span class="skill-badge">MySQL</span>
-                    </div>
-                </div>
-                <!-- AI & DevOps -->
-                <div class="skills-category-card glass-card">
-                    <h3>AI & DevOps</h3>
-                    <div class="skills-grid">
-                        <span class="skill-badge"><img src="./images/openai.svg" alt="LLM APIs" class="dark-invert"> LLM
-                            APIs</span>
-                        <span class="skill-badge">Prompt Engineering</span>
-                        <span class="skill-badge">AI Workflows</span>
-                        <span class="skill-badge"><img src="./images/git.svg" alt="Git"> Git</span>
-                        <span class="skill-badge"><img src="./images/github.svg" alt="GitHub" class="dark-invert">
-                            GitHub Actions (CI/CD)</span>
-                        <span class="skill-badge"><img src="./images/Vector.svg" alt="Vercel" class="dark-invert">
-                            Vercel</span>
-                        <span class="skill-badge"><img src="./images/netlify.svg" alt="Netlify"> Netlify</span>
-                        <span class="skill-badge"><img src="./images/aws.svg" alt="AWS"> AWS S3</span>
-                        <span class="skill-badge">Docker</span>
-                    </div>
-                </div>
-                <!-- Quality & Mobile -->
-                <div class="skills-category-card glass-card">
-                    <h3>Mobile & Quality Assurance</h3>
-                    <div class="skills-grid">
-                        <span class="skill-badge"><img src="./images/react.svg" alt="React Native"> React Native</span>
-                        <span class="skill-badge"><img src="./images/cypress.svg" alt="Cypress"> Cypress</span>
-                        <span class="skill-badge">Sentry</span>
-                        <span class="skill-badge">SonarQube</span>
-                        <span class="skill-badge">Socket.io</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section start -->
-    <section id="projects" class="nav-link projects">
-        <div class="max-width">
-            <h2 class="title">Projects</h2>
-            <div class="carousel owl-carousel">
-                <!-- Smart Link Router -->
-                <div class="project-card glass-card">
-                    <span class="project-tag flashing">New</span>
-                    <img src="./images/smart-link-router.png" alt="Smart Link Router">
-                    <div class="project-title">Smart Link Router</div>
-                    <p class="project-description">An enterprise-grade dynamic link router and cross-platform analytics platform inspired by Vercel, Stripe, and Linear.</p>
-                    <p class="project-tech-stack"><strong>Tech Stack:</strong> Next.js 14 | Express | MongoDB | Strapi</p>
-                    <div class="repo-links">
-                        <a class="project-github-link" href="https://github.com/rishiksinha59/smart-link-router"
-                            target="_blank">Git Repo</a>
-                        <a class="project-deployed-link" href="https://smart-link-router.vercel.app/" target="_blank">Live
-                            Site</a>
-                    </div>
-                </div>
-                <!-- EdgeDocs -->
-                <div class="project-card glass-card">
-                    <img src="./images/edgedocs.png" alt="EdgeDocs">
-                    <div class="project-title">EdgeDocs</div>
-                    <p class="project-description">A modern API and project documentation platform designed for developers to write, manage, and share documents seamlessly.</p>
-                    <p class="project-tech-stack"><strong>Tech Stack:</strong> Next.js | TypeScript | Tailwind CSS</p>
-                    <div class="repo-links">
-                        <a class="project-github-link" href="https://github.com/rishiksinha59/edgedocs"
-                            target="_blank">Git Repo</a>
-                        <a class="project-deployed-link" href="https://edgedocs.vercel.app/" target="_blank">Live
-                            Site</a>
-                    </div>
-                </div>
-                <!-- Pelican -->
-                <div class="project-card glass-card">
-                    <img src="./images/pelican.png" alt="Pelican E-Commerce">
-                    <div class="project-title">Pelican E-Commerce</div>
-                    <p class="project-description">An e-commerce platform Pelican, a clothing website with attractive
-                        UI/UX.</p>
-                    <p class="project-tech-stack"><strong>Tech Stack:</strong> MERN | Vite | JavaScript</p>
-                    <div class="repo-links">
-                        <a class="project-github-link" href="https://github.com/rishiksinha59/ecommerce"
-                            target="_blank">Git Repo</a>
-                        <a class="project-deployed-link" href="https://pelican-fe.vercel.app/" target="_blank">Live
-                            Site</a>
-                    </div>
-                </div>
-                <!-- iPhone Clone -->
-                <div class="project-card glass-card">
-                    <img src="./images/iphone.png" alt="iPhone Clone">
-                    <div class="project-title">iPhone Clone</div>
-                    <p class="project-description">iPhone clone is a page inspired from the stunning iPhone UI/UX from
-                        apple.com</p>
-                    <p class="project-tech-stack"><strong>Tech Stack:</strong> React | GSAP | JS</p>
-                    <div class="repo-links">
-                        <a class="project-github-link" href="https://github.com/rishiksinha59/appleclone"
-                            target="_blank">Git Repo</a>
-                        <a class="project-deployed-link" href="https://appleclone-theta.vercel.app/"
-                            target="_blank">Live Site</a>
-                    </div>
-                </div>
-                <!-- Spotify -->
-                <div class="project-card glass-card">
-                    <img src="./images/spotify.png" alt="Spotify Clone">
-                    <div class="project-title">Spotify Player Clone</div>
-                    <p class="project-description">Spotify clone features media player inspired from Spotify, with
-                        remarkable UI.</p>
-                    <p class="project-tech-stack"><strong>Tech Stack:</strong> React | Tailwind | JS</p>
-                    <div class="repo-links">
-                        <a class="project-github-link" href="https://github.com/rishiksinha59/appleclone"
-                            target="_blank">Git Repo</a>
-                        <a class="project-deployed-link" href="https://spotifyclone-ten-gamma.vercel.app/"
-                            target="_blank">Live Site</a>
-                    </div>
-                </div>
-                <!-- Appetizer -->
-                <div class="project-card glass-card">
-                    <img src="./images/appetizer.png" alt="Appetizer">
-                    <div class="project-title">Appetizer</div>
-                    <p class="project-description">A full-featured MERN stack food delivery application comprising a user storefront, an administrative dashboard, and a REST API.</p>
-                    <p class="project-tech-stack"><strong>Tech Stack:</strong> MERN | Vite | JavaScript</p>
-                    <div class="repo-links">
-                        <a class="project-github-link" href="https://github.com/rishiksinha59/FoodDeliveryApp"
-                            target="_blank">Git Repo</a>
-                        <a class="project-deployed-link" href="https://food-delivery-app-smoky-chi.vercel.app/" target="_blank">Live
-                            Site</a>
-                    </div>
-                </div>
-                <!-- Bewakoof -->
-                <div class="project-card glass-card">
-                    <img src="./images/bwkf.png" alt="Bewakoof Clone">
-                    <div class="project-title">Bewakoof Clone E-Commerce</div>
-                    <p class="project-description">An e-commerce clone of Bewakoof, a clothing and accessories website
-                        with attractive UI/UX.</p>
-                    <p class="project-tech-stack"><strong>Tech Stack:</strong> HTML | CSS | JavaScript</p>
-                    <div class="repo-links">
-                        <a class="project-github-link" href="https://github.com/Surajdy/Bewakoof_Clone"
-                            target="_blank">Git Repo</a>
-                        <a class="project-deployed-link" href="https://spectacular-gecko-caaf10.netlify.app/index.html"
-                            target="_blank">Live Site</a>
-                    </div>
-                </div>
-                <!-- Specialized -->
-                <div class="project-card glass-card">
-                    <img src="./images/specialized.png" alt="Specialized Cycle Shop">
-                    <div class="project-title">Specialized Cycle Shop</div>
-                    <p class="project-description">Specialized bicycle offers a wide range of bicycles with exclusive
-                        features for adventure loving riders.</p>
-                    <p class="project-tech-stack"><strong>Tech Stack:</strong> HTML | CSS | JavaScript</p>
-                    <div class="repo-links">
-                        <a class="project-github-link" href="https://github.com/Surajdy/Specialized" target="_blank">Git
-                            Repo</a>
-                        <a class="project-deployed-link" href="https://busy-industry-7181.netlify.app"
-                            target="_blank">Live Site</a>
+                    <div id="col-right" class="column right">
+                        <h3 class="text">Message Me</h3>
+                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="24bbd042-91b0-4249-b4da-56902df74c97">
+                            <div class="fields">
+                                <div class="field name">
+                                    <label for="contact-name" class="visually-hidden">Name</label>
+                                    <input id="contact-name" type="text" name="name" placeholder="Name" required
+                                        autocomplete="name">
+                                </div>
+                                <div class="field email">
+                                    <label for="contact-email-input" class="visually-hidden">Email</label>
+                                    <input id="contact-email-input" type="email" name="email" placeholder="Email"
+                                        required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="contact-subject" class="visually-hidden">Subject</label>
+                                <input id="contact-subject" type="text" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="field textarea">
+                                <label for="contact-message" class="visually-hidden">Message</label>
+                                <textarea id="contact-message" name="message" placeholder="Message.." required></textarea>
+                            </div>
+                            <div class="button-area">
+                                <button type="submit" id="submit-btn">Send Message</button>
+                            </div>
+                            <div id="form-status" class="form-status" aria-live="polite"></div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section start -->
-    <section class="nav-link contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact</h2>
-            <div class="contact-content">
-                <div id="col-left" class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>Have an interesting opportunity or project? Feel free to reach out. I am open to discussing
-                        full-time roles, contract work, or technical collaborations.</p>
-                    <div class="icons">
-                        <div class="row" id="contact-email">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="sub-title"><a
-                                        href="mailto:sinharishik8@gmail.com">sinharishik8@gmail.com</a></div>
-                            </div>
-                        </div>
-                        <div class="row" id="contact-phone">
-                            <i class="fas fa-phone"></i>
-                            <div class="info">
-                                <div class="sub-title">+91 7488071758</div>
-                            </div>
-                        </div>
-                        <div class="row" id="contact-linkedin">
-                            <i class="fab fa-linkedin"></i>
-                            <div class="info">
-                                <div class="sub-title"><a href="https://www.linkedin.com/in/rishik-sinha-61a718287/"
-                                        target="_blank">linkedin.com/in/rishik-sinha</a></div>
-                            </div>
-                        </div>
-                        <div class="row" id="contact-github">
-                            <i class="fab fa-github"></i>
-                            <div class="info">
-                                <div class="sub-title"><a href="https://github.com/rishiksinha59/"
-                                        target="_blank">github.com/rishiksinha59</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="col-right" class="column right">
-                    <div class="text">Message Me</div>
-                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="24bbd042-91b0-4249-b4da-56902df74c97">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" name="name" placeholder="Name" required autocomplete="name">
-                            </div>
-                            <div class="field email">
-                                <input type="email" name="email" placeholder="Email" required autocomplete="email">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" name="subject" placeholder="Subject" required autocomplete="off">
-                        </div>
-                        <div class="field textarea">
-                            <textarea name="message" placeholder="Message.." required autocomplete="off"></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit" id="submit-btn">Send Message</button>
-                        </div>
-                        <div id="form-status" class="form-status"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer start -->
     <footer>
-        <span>Created By <a href="#home">Rishik Sinha</a> | <span class="far fa-copyright"></span> 2026 All rights
-            reserved.</span>
+        <span>Created By <a href="#home">Rishik Sinha</a> | &copy; 2026 All rights reserved.</span>
     </footer>
-
-    <script src="index.js"></script>
 </body>
 
 </html>
